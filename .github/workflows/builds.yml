@@ -93,6 +93,12 @@ jobs:
         meson setup build_meson hidapisrc
         cd build_meson
         ninja
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: macOS
+        path: build/
 
   ubuntu-cmake:
 
@@ -156,6 +162,12 @@ jobs:
         meson setup build_meson hidapisrc
         cd build_meson
         ninja
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: linux
+        path: build/
 
   windows-cmake:
 
@@ -275,6 +287,12 @@ jobs:
         meson setup build_meson hidapisrc
         cd build_meson
         ninja
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: windows-minGW
+        path: build/
 
   windows-msbuild:
 
